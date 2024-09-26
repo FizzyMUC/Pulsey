@@ -17,7 +17,7 @@ struct AddView: View {
     @State private var valueDiastolic: Int = 80
     @State private var pulse: Int = 60
     @State private var note: String = ""
-    @State private var assessment: String = ""
+    @State private var assessment = (string: "", icon: "")
     
     var bloodValues: Entries
     
@@ -28,14 +28,31 @@ struct AddView: View {
                     Text(date, format: .dateTime.day().month().year().hour().minute().second().minute())
                 }
                 Section("Blood pressure") {
-                    TextField("Systolic", value: $valueSystolic, format: .number)
-                        .keyboardType(.decimalPad)
-                    TextField("Diastolic", value: $valueDiastolic, format: .number)
-                        .keyboardType(.decimalPad)
+                    HStack {
+                        Label("Systolic", systemImage: "arrow.up.heart")
+                            .labelStyle(.iconOnly)
+                            .foregroundColor(.purple)
+                        TextField("Systolic", value: $valueSystolic, format: .number)
+                            .keyboardType(.decimalPad)
+                    }
+                    HStack {
+                        Label("Diastolic", systemImage: "arrow.down.heart")
+                            .labelStyle(.iconOnly)
+                            .foregroundColor(.purple)
+                        TextField("Diastolic", value: $valueDiastolic, format: .number)
+                            .keyboardType(.decimalPad)
+                    }
+                    
                 }
                 Section("Pulse") {
-                    TextField("Pulse", value: $pulse, format: .number)
-                        .keyboardType(.decimalPad)
+                    HStack {
+                        Label("Pulse", systemImage: "waveform.path.ecg")
+                            .labelStyle(.iconOnly)
+                            .foregroundColor(.purple)
+                        TextField("Pulse", value: $pulse, format: .number)
+                            .keyboardType(.decimalPad)
+                    }
+                    
                 }
                 Section("Notes") {
                     TextField("Notes", text: $note, axis: .vertical)
@@ -47,8 +64,8 @@ struct AddView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button("Save") {
-                    assessment = assessValue(diastolic: valueDiastolic, systolic: valueSystolic)
-                    let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment)
+                    assessment = assessValue(systolic: valueSystolic, diastolic: valueDiastolic)
+                    let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
                     
                     // Add new item as first entry in the array
                     bloodValues.items.insert(item, at: 0)
@@ -58,27 +75,28 @@ struct AddView: View {
         }
     }
     
-    func assessValue(diastolic: Int, systolic: Int) -> String {
-        if diastolic > 180 && systolic > 110 {
-            return "Hypertension, Grade 3"
+    func assessValue(systolic: Int, diastolic: Int) -> (String, String) {
+        // Function always returns a description of the assessment plus a corresponding icon in a tuple
+        if systolic > 180 && diastolic > 110 {
+            return ("Hypertension, Grade 3", "😵")
         }
-        else if diastolic > 159 && systolic > 99 {
-            return "Hypertension, Grade 2"
+        else if systolic > 159 && diastolic > 99 {
+            return ("Hypertension, Grade 2", "😞")
         }
-        else if diastolic > 139 && systolic > 89 {
-            return "Hypertension, Grade 1"
+        else if systolic > 139 && diastolic > 89 {
+            return ("Hypertension, Grade 1", "😕")
         }
-        else if diastolic > 129 && systolic > 84 {
-            return "High normal"
+        else if systolic > 129 && diastolic > 84 {
+            return ("High normal", "😊")
         }
-        else if diastolic > 119 && systolic > 79 {
-            return "Normal"
+        else if systolic > 119 && diastolic > 79 {
+            return ("Normal", "😄")
         }
-        else if diastolic < 120 && systolic < 80 {
-            return "Optimal"
+        else if systolic < 120 && diastolic < 80 {
+            return ("Optimal", "🤩")
         }
         else {
-            return "n/a"
+            return ("n/a", "😶")
         }
     }
 }
