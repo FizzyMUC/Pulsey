@@ -92,7 +92,14 @@
       }
     },
     "Automatic" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        }
+      }
     },
     "Blood pressure" : {
       "localizations" : {
@@ -117,8 +124,18 @@
         }
       }
     },
-    "Dark" : {
+    "Currently no trends available" : {
 
+    },
+    "Dark" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunkel"
+          }
+        }
+      }
     },
     "Diastolic" : {
       "localizations" : {
@@ -161,7 +178,14 @@
       }
     },
     "Light" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hell"
+          }
+        }
+      }
     },
     "Notes" : {
       "localizations" : {
@@ -314,10 +338,24 @@
       }
     },
     "This is where you can change the accent color" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier kannst du die Akzentfarbe anpassen"
+          }
+        }
+      }
     },
     "This is where you can enable push notifications" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier kannst du Benachrichtigungen einstellen"
+          }
+        }
+      }
     },
     "Trends" : {
       "localizations" : {
@@ -329,14 +367,25 @@
         }
       }
     },
-    "TrendsView" : {
-
-    },
     "Version" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        }
+      }
     },
     "Version info" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version Info"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

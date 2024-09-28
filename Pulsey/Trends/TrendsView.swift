@@ -9,7 +9,20 @@ import SwiftUI
 
 struct TrendsView: View {
     var body: some View {
-        Text("TrendsView")
+        NavigationStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 300, height: 200)
+                    .foregroundStyle(.regularMaterial)
+                VStack {
+                    Image(systemName: "heart.slash")
+                        .foregroundStyle(.secondary)
+                        .imageScale(.large)
+                    Text("Currently no trends available")
+                }
+            }
+            .navigationTitle("Trends")
+        }
     }
 }
 
