@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8A3136B2CA867B500ADB6D3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B8A3136A2CA867B500ADB6D3 /* README.md */; };
 		B8B1A5722CA689EA0027290D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B8B1A5712CA689EA0027290D /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B819C5D12CA54F45005476F8 /* Pulsey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulsey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A3136A2CA867B500ADB6D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B8B1A5712CA689EA0027290D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +52,7 @@
 		B819C5C82CA54F45005476F8 = {
 			isa = PBXGroup;
 			children = (
+				B8A3136A2CA867B500ADB6D3 /* README.md */,
 				B8B1A5712CA689EA0027290D /* Localizable.xcstrings */,
 				B819C5D32CA54F45005476F8 /* Pulsey */,
 				B819C5D22CA54F45005476F8 /* Products */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A3136B2CA867B500ADB6D3 /* README.md in Resources */,
 				B8B1A5722CA689EA0027290D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
