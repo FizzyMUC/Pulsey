@@ -25,7 +25,7 @@ struct AddView: View {
         NavigationStack {
             Form {
                 Section {
-                    Text(date, format: .dateTime.day().month().year().hour().minute().second().minute())
+                    DatePicker("Date", selection: $date, in: ...date)
                 }
                 Section("Blood pressure") {
                     HStack {
@@ -68,7 +68,11 @@ struct AddView: View {
                     let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
                     
                     // Add new item as first entry in the array
-                    bloodValues.items.insert(item, at: 0)
+                    // bloodValues.items.insert(item, at: 0)
+                    
+                    bloodValues.items.append(item)
+                    bloodValues.items.sort { $0.date > $1.date }
+                    
                     dismiss()
                 }
             }
