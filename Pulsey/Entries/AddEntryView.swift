@@ -86,19 +86,19 @@ struct AddEntryView: View {
     
     func assessValue(systolic: Int, diastolic: Int) -> (String, String) {
         // Function always returns a description of the assessment plus a corresponding icon in a tuple
-        if systolic > 180 && diastolic > 110 {
+        if systolic >= 180 || diastolic >= 110 {
             return ("Hypertension, Grade 3", "😵")
         }
-        else if systolic > 159 && diastolic > 99 {
+        else if systolic >= 160 || diastolic >= 100 {
             return ("Hypertension, Grade 2", "😞")
         }
-        else if systolic > 139 && diastolic > 89 {
+        else if systolic >= 140 || diastolic >= 90 {
             return ("Hypertension, Grade 1", "😕")
         }
-        else if systolic > 129 && diastolic > 84 {
+        else if systolic >= 130 || diastolic >= 85 {
             return ("High normal", "😊")
         }
-        else if systolic > 119 && diastolic > 79 {
+        else if systolic <= 129 || diastolic >= 80 {
             return ("Normal", "😄")
         }
         else if systolic < 120 && diastolic < 80 {
