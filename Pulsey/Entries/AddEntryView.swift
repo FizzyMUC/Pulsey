@@ -69,16 +69,17 @@ struct AddEntryView: View {
                         dismiss()
                     }
                 }
-                ToolbarItem(placement: .confirmationAction) {                Button("Save") {
-                    assessment = assessValue(systolic: valueSystolic, diastolic: valueDiastolic)
-                    let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
-                    
-                    // Append new item to entries, then sort the whole array by date
-                    bloodValues.items.append(item)
-                    bloodValues.items.sort { $0.date > $1.date }
-                    
-                    dismiss()
-                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        assessment = assessValue(systolic: valueSystolic, diastolic: valueDiastolic)
+                        let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
+                        
+                        // Append new item to entries, then sort the whole array by date
+                        bloodValues.items.append(item)
+                        bloodValues.items.sort { $0.date > $1.date }
+                        
+                        dismiss()
+                    }
                 }
             }
         }

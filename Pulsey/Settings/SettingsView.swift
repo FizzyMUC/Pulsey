@@ -15,7 +15,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 
-                Section("Preferences") {
+                Section("App options") {
                     
                     NavigationLink {
                         AccentColorView()
@@ -41,6 +41,7 @@ struct SettingsView: View {
                                 .foregroundStyle(.purple)
                         }
                     }
+                    .pickerStyle(.automatic)
                     
                     NavigationLink {
                         NotificationsView()
@@ -49,6 +50,17 @@ struct SettingsView: View {
                             Text("Push Notifications")
                         } icon: {
                             Image(systemName: "bell")
+                                .foregroundStyle(.purple)
+                        }
+                    }
+                    
+                    NavigationLink {
+                        Text("This is where Apple Health integration will be")
+                    } label: {
+                        Label {
+                            Text("Connect to Apple Health")
+                        } icon: {
+                            Image(systemName: "heart")
                                 .foregroundStyle(.purple)
                         }
                     }
