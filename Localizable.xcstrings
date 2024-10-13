@@ -340,6 +340,9 @@
         }
       }
     },
+    "Test" : {
+
+    },
     "This is where you can change the accent color" : {
       "localizations" : {
         "de" : {
