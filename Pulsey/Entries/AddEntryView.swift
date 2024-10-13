@@ -26,6 +26,7 @@ struct AddEntryView: View {
             Form {
                 Section {
                     DatePicker("Date", selection: $date, in: ...date)
+                        .datePickerStyle(.automatic)
                 }
                 Section("Blood pressure") {
                     HStack {
