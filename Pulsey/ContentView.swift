@@ -23,12 +23,20 @@ struct ContentView: View {
                 .tag(0)
                 .accentColor(.purple)
             
-            TrendsView()
+            StatisticsView()
                 .tabItem {
                     Image(systemName: "chart.dots.scatter")
-                    Text("Trends")
+                    Text("Statistics")
                 }
                 .tag(1)
+                .accentColor(.purple)
+            
+            TrendsView()
+                .tabItem {
+                    Image(systemName: "chart.line.uptrend.xyaxis")
+                    Text("Trends")
+                }
+                .tag(2)
                 .accentColor(.purple)
             
             SettingsView()
@@ -36,7 +44,7 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
-                .tag(2)
+                .tag(3)
                 .accentColor(.purple)
         }
         

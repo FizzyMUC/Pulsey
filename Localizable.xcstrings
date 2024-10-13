@@ -81,6 +81,9 @@
         }
       }
     },
+    "App options" : {
+
+    },
     "Appearance" : {
       "localizations" : {
         "de" : {
@@ -126,6 +129,9 @@
           }
         }
       }
+    },
+    "Connect to Apple Health" : {
+
     },
     "Currently no trends available" : {
 
@@ -342,6 +348,9 @@
           }
         }
       }
+    },
+    "This is where Apple Health integration will be" : {
+
     },
     "This is where you can change the accent color" : {
       "localizations" : {
