@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddView: View {
+struct AddEntryView: View {
     // Enable dismissing the sheet after entry is created
     @Environment(\.dismiss) var dismiss
     
@@ -63,17 +63,21 @@ struct AddView: View {
             .navigationTitle("Add new blood values")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("Save") {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {                Button("Save") {
                     assessment = assessValue(systolic: valueSystolic, diastolic: valueDiastolic)
                     let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
                     
-                    // Add new item as first entry in the array
-                    // bloodValues.items.insert(item, at: 0)
-                    
+                    // Append new item to entries, then sort the whole array by date
                     bloodValues.items.append(item)
                     bloodValues.items.sort { $0.date > $1.date }
                     
                     dismiss()
+                }
                 }
             }
         }
@@ -106,5 +110,5 @@ struct AddView: View {
 }
 
 #Preview {
-    AddView(bloodValues: Entries())
+    AddEntryView(bloodValues: Entries())
 }

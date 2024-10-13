@@ -60,7 +60,7 @@ struct EntryView: View {
                 }
             }
             .sheet(isPresented: $showingAddView) {
-                AddView(bloodValues: bloodValues)
+                AddEntryView(bloodValues: bloodValues)
             }
         }
     }

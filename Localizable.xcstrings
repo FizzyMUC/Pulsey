@@ -114,6 +114,9 @@
     "Build" : {
 
     },
+    "Cancel" : {
+
+    },
     "Change accent color" : {
       "localizations" : {
         "de" : {
@@ -339,9 +342,6 @@
           }
         }
       }
-    },
-    "Test" : {
-
     },
     "This is where you can change the accent color" : {
       "localizations" : {

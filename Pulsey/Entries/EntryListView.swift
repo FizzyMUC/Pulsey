@@ -15,7 +15,7 @@ struct EntryListView: View {
         List {
             ForEach(bloodValues.items) { item in
                 NavigationLink {
-                    Text("Test")
+                    // EditEntryView(bloodValues: bloodValues)
                 } label: {
                     VStack(alignment: .leading) {
                         VStack {
