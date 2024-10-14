@@ -82,7 +82,14 @@
       }
     },
     "App options" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Optionen"
+          }
+        }
+      }
     },
     "Appearance" : {
       "localizations" : {
@@ -115,10 +122,24 @@
       }
     },
     "Build" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build"
+          }
+        }
+      }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        }
+      }
     },
     "Change accent color" : {
       "localizations" : {
@@ -131,13 +152,34 @@
       }
     },
     "Connect to Apple Health" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Apple Health verbinden"
+          }
+        }
+      }
     },
     "Currently no statistics available" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Statistik verfügbar"
+          }
+        }
+      }
     },
     "Currently no trends available" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Trends verfügbar"
+          }
+        }
+      }
     },
     "Dark" : {
       "localizations" : {
@@ -150,7 +192,14 @@
       }
     },
     "Date" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        }
+      }
     },
     "Diastolic" : {
       "localizations" : {
@@ -326,7 +375,14 @@
       }
     },
     "Statistics" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik"
+          }
+        }
+      }
     },
     "Support future development" : {
       "localizations" : {
@@ -359,7 +415,14 @@
       }
     },
     "This is where Apple Health integration will be" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier kannst du die Apple Health Integration einstellen"
+          }
+        }
+      }
     },
     "This is where you can change the accent color" : {
       "localizations" : {
