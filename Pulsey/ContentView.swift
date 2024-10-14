@@ -22,6 +22,7 @@ struct ContentView: View {
                 }
                 .tag(0)
                 .accentColor(.purple)
+
             
             StatisticsView()
                 .tabItem {

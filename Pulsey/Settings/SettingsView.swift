@@ -90,7 +90,6 @@ struct SettingsView: View {
                     Link(destination: URL(string: "https://x.com/pulsey_app")!, label: {
                         Label {
                             Text("Follow us on X")
-                                .foregroundStyle(.black)
                         } icon: {
                             Image(systemName: "point.3.connected.trianglepath.dotted")
                                 .foregroundStyle(.purple)
@@ -104,7 +103,6 @@ struct SettingsView: View {
                     Link(destination: URL(string: "https://www.dancingfrogs.de/pulsey")!, label: {
                         Label {
                             Text("About Pulsey")
-                                .foregroundStyle(.black)
                         } icon: {
                             Image(systemName: "info.circle")
                                 .foregroundStyle(.purple)
@@ -123,7 +121,6 @@ struct SettingsView: View {
                     Link(destination: URL(string: "mailto:pulsey-app@dancingfrogs.de")!, label: {
                         Label {
                             Text("Report a bug")
-                                .foregroundStyle(.black)
                         } icon: {
                             Image(systemName: "ladybug.circle")
                                 .foregroundStyle(.purple)
@@ -132,7 +129,6 @@ struct SettingsView: View {
                     Link(destination: URL(string: "mailto:pulsey-app@dancingfrogs.de")!, label: {
                         Label {
                             Text("Request support")
-                                .foregroundStyle(.black)
                         } icon: {
                             Image(systemName: "envelope.circle")
                                 .foregroundStyle(.purple)

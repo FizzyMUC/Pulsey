@@ -28,7 +28,8 @@ struct EntryView: View {
                 AddEntryView(bloodValues: bloodValues)
                 
                 // FIXME: When presenting AddEntryView, the values from the last entry shall be shown in the textfield
-                //AddEntryView(bloodValues: bloodValues, newValueSystolic: bloodValues.items[bloodValues.items.count - 1].valueSystolic ?? 120, newValueDiastolic: bloodValues.items[bloodValues.items.count - 1].valueDiastolic ?? 80)
+                // let _ = print(bloodValues.items[bloodValues.items.count - 1])
+                // AddEntryView(bloodValues: bloodValues, newValueSystolic: bloodValues.items[bloodValues.items.count - 1].valueSystolic ?? 120, newValueDiastolic: bloodValues.items[bloodValues.items.count - 1].valueDiastolic ?? 80)
             }
         }
     }

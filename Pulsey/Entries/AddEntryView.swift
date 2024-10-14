@@ -25,7 +25,7 @@ struct AddEntryView: View {
         NavigationStack {
             Form {
                 Section {
-                    DatePicker("Date", selection: $date, in: ...date)
+                    DatePicker("Date", selection: $date)
                         .datePickerStyle(.automatic)
                 }
                 Section("Blood pressure") {
