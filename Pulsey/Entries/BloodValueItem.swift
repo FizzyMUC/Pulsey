@@ -14,6 +14,7 @@ struct BloodValueItem: Identifiable, Codable {
     let valueDiastolic: Int
     let pulse: Int
     let note: String
+    let medicationUsed: Bool
     let assessment: String
     let icon: String
 }

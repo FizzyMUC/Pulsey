@@ -51,6 +51,6 @@ struct EntryItemView: View {
 
 
 #Preview {
-    let item = BloodValueItem(date: Date.now, valueSystolic: 130, valueDiastolic: 80, pulse: 66, note: "", assessment: "High normal", icon: "😍")
+    let item = BloodValueItem(date: Date.now, valueSystolic: 130, valueDiastolic: 80, pulse: 66, note: "", medicationUsed: true, assessment: "High normal", icon: "😍")
     EntryItemView(item: item)
 }

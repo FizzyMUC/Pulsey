@@ -17,6 +17,7 @@ struct AddEntryView: View {
     @State private var valueDiastolic: Int = 80
     @State private var pulse: Int = 60
     @State private var note: String = ""
+    @State private var medicationUsed: Bool = false
     @State private var assessment = (string: "", icon: "")
     
     var bloodValues: Entries
@@ -56,6 +57,7 @@ struct AddEntryView: View {
                     
                 }
                 Section("Notes") {
+                    Toggle("Medication used", isOn: $medicationUsed)
                     TextField("Notes", text: $note, axis: .vertical)
                         .lineLimit(4, reservesSpace: true)
                         .keyboardType(.default)
@@ -72,7 +74,7 @@ struct AddEntryView: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
                         assessment = assessValue(systolic: valueSystolic, diastolic: valueDiastolic)
-                        let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, assessment: assessment.string, icon: assessment.icon)
+                        let item = BloodValueItem(date: date, valueSystolic: valueSystolic, valueDiastolic: valueDiastolic, pulse: pulse, note: note, medicationUsed: medicationUsed, assessment: assessment.string, icon: assessment.icon)
                         
                         // Append new item to entries, then sort the whole array by date
                         bloodValues.items.append(item)
