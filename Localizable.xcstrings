@@ -201,6 +201,12 @@
         }
       }
     },
+    "Day" : {
+
+    },
+    "diastolic" : {
+
+    },
     "Diastolic" : {
       "localizations" : {
         "de" : {
@@ -324,6 +330,9 @@
         }
       }
     },
+    "Recent heart rate values" : {
+
+    },
     "Report a bug" : {
       "localizations" : {
         "de" : {
@@ -404,6 +413,9 @@
         }
       }
     },
+    "systolic" : {
+
+    },
     "Systolic" : {
       "localizations" : {
         "de" : {
@@ -443,6 +455,9 @@
           }
         }
       }
+    },
+    "Total: %lld values" : {
+
     },
     "Trends" : {
       "localizations" : {
