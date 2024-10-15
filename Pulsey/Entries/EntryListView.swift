@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EntryListView: View {
     
-    let bloodValues = Entries()
+    //let bloodValues = Entries()
+    let bloodValues: Entries
     
     var body: some View {
         List {
@@ -59,5 +60,6 @@ struct EntryListView: View {
 }
 
 #Preview {
-    EntryListView()
+    let bloodValues = Entries()
+    EntryListView(bloodValues: bloodValues)
 }

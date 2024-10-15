@@ -53,7 +53,6 @@ struct StatisticsView: View {
                     
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: .infinity, height: 250)
                             .foregroundStyle(.gray.gradient.opacity(0.1))
                             .containerRelativeFrame(.horizontal) { length, axis in
                                 return length * 0.95

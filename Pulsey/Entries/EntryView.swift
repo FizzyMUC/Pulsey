@@ -16,7 +16,7 @@ struct EntryView: View {
     var body: some View {
         
         NavigationStack {
-            EntryListView()
+            EntryListView(bloodValues: bloodValues)
             .navigationTitle("Pulsey")
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
